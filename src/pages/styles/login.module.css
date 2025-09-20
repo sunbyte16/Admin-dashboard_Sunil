@@ -1,0 +1,301 @@
+.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.inactive {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: 0;
+}
+
+.form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.header {
+  text-align: center;
+}
+
+.redirect {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.redirect span {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.main {
+  border: 1px solid rgb(255, 255, 255);
+  height: 100vh;
+  background-size: cover;
+  background-image: url(https://s3-alpha-sig.figma.com/img/8cbc/dedb/796c610da3f6d8b59a11e9447c30c3c0?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ge1Wq9ULEGc9lqbXDP~Xt2ZvqDz8AeU5BKTy1DdiH1pljYMTld~tzLwNsReiuKOsbZmOOkIq8b4Xz2bJsgFkxaMhw4KqHV~HVcU8dsd6k3xuY9cacbMnr07GbkxvzP6UC3r~IGMzcX8uYFbBwp6uKbK1jqwCifuBlPTq7KB3w6HlSV4vx8wJuh8o4W3KMEtzFn~0qThVS4BPONoKCh3dRyubBAKwILTOc50lZ48v1mwBTe7FopDWtXAXYCthDTq~RQ~18XUGC9oPjo03YPxNcuU83GaqxwxmcQvTEgGdPAHolO6GhSWZ75xXy2Ssn8iHrBZ9sqHupc0cmf8bbO4oFg__);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.box1, .box2 {
+  border: 1px solid rgb(230, 230, 230);
+  height: auto;
+  width: 330px;
+  position: relative;
+  left: -270px;
+  top: -30px;
+  border-radius: 6px;
+  background-color: white;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.header {
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.header img {
+  margin: auto;
+  height: 150px;
+}
+
+.header p {
+  margin-top: -10px;
+  font-size: 16px;
+}
+
+.form input {
+  width: 82%;
+  height: 32px;
+  border-radius: 4px;
+  border: 0.5px solid rgb(220, 220, 220);
+  outline: 0.5px solid rgb(220, 220, 220);
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.label {
+  position: relative;
+  top: 10px;
+  left: -60px;
+  background: white;
+  padding-left: 14px;
+  padding-right: 4px;
+  font-size: 12px;
+}
+
+.form a {
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  top: 8px;
+  left: 70px;
+}
+
+.form button {
+  width: 86%;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #662671;
+  color: white;
+  border: none;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  width: 88%;
+  margin: auto;
+  margin-top: 40.2px;
+  background-color: #8b4897;
+  color: white;
+  border: none;
+  height: 33px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.repeat {
+  position: relative;
+  top: 10px;
+  left: -40px;
+  background: white;
+  padding-left: 14px;
+  padding-right: 4px;
+  font-size: 12px;
+}
+
+.redirect {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.redirect span {
+  color: #662671;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.redirect span:hover {
+  color: #662671;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box1 {
+  margin: auto;
+  margin-top: 140px;
+  margin-left: 660px;
+}
+
+.box2 {
+  margin: auto;
+  margin-top: -440px;
+  margin-left: 660px;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed; /* Stay fixed on the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the modal is on top of everything */
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+  z-index: 10000; /* Ensure modal content is above other elements */
+}
+
+.modalContent input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.modalContent button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #6a1b9a;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modalContent button:last-child {
+  background-color: grey; /* Different color for cancel button */
+}
+
+.modalContent input {
+  border: 0.5px solid rgb(177, 168, 168);
+  outline: 0.5px solid rgb(170, 164, 164);
+  border-radius: 6px;
+  margin: 6px;
+}
+
+.modalContent h3 {
+  font-size: larger;
+  font-weight: bold;
+  margin: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .box1,
+  .box2 {
+      width: 280px; /* Adjust box width for medium screens */
+      left: -240px; /* Adjust left position */
+  }
+
+  .main {
+      background-size: cover; /* Ensure background covers */
+  }
+
+  .header img {
+      height: 120px; /* Adjust image height for medium screens */
+  }
+
+  .header p {
+      font-size: 14px; /* Reduce font size */
+  }
+
+  .form input {
+      font-size: 14px; /* Reduce input font size */
+  }
+
+  .form button {
+      font-size: 14px; /* Reduce button font size */
+  }
+
+  .modalContent {
+      width: 90%; /* Make modal responsive */
+  }
+}
+
+@media (max-width: 992px) {
+  .box1,
+  .box2 {
+      width: 90%; /* Full width for small screens */
+      left: 0; /* Center the boxes */
+      top: 20px; /* Adjust position */
+      margin-left: 0; /* Remove left margin */
+  }
+
+  .header img {
+      height: 100px; /* Further reduce image height */
+  }
+
+  .header p {
+      font-size: 12px; /* Further reduce font size */
+  }
+
+  .modalContent {
+      width: 90%; /* Make modal responsive */
+  }
+}
+
+@media (max-width: 576px) {
+  .header img {
+      height: 80px; /* Smallest image size */
+  }
+
+  .header p {
+      font-size: 10px; /* Smallest font size */
+  }
+
+  .form input {
+      height: 28px; /* Adjust input height */
+  }
+
+  .form button {
+      height: 30px; /* Adjust button height */
+  }
+
+  .modalContent {
+      width: 95%; /* Make modal responsive */
+  }
+}

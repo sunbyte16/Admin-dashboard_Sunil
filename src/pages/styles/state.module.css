@@ -1,0 +1,130 @@
+/* Main Container */
+.top {
+    width: 100%;
+    height: auto; /* Changed to auto to accommodate content height */
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Added padding for better spacing on small screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+}
+
+/* Left Section */
+.left {
+    flex: 1; /* Adjusted to allow flexibility */
+    display: flex;
+    align-items: center;
+}
+
+.left svg {
+    width: 2.5em; /* Use relative units for better responsiveness */
+    height: 2.5em;
+    margin: 10px;
+}
+
+.left p {
+    font-size: 1.4em; /* Use relative units for better responsiveness */
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+/* Middle Section */
+.mid {
+    flex: 2; /* Adjusted to allow more space for the input */
+    display: flex;
+    justify-content: center;
+}
+
+.mid input {
+    border: 0.5px solid #969191;
+    outline: 0.5px solid #a19e9e;
+    height: 2em; /* Use relative height */
+    padding: 4px 8px;
+    width: 90%; /* Full width for input on smaller screens */
+    font-size: 1em; /* Use relative units for better responsiveness */
+}
+
+/* Right Section */
+.right {
+    flex: 1; /* Adjusted to allow flexibility */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right button {
+    width: 100px;
+    height: 2.5em; /* Use relative units for better responsiveness */
+    font-weight: 500;
+    background-color: #662671;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    margin-top: 12px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .left {
+        /* Consider adjusting styles if necessary */
+    }
+
+    .mid {
+        /* Consider adjusting styles if necessary */
+    }
+
+    .right {
+        /* Consider adjusting styles if necessary */
+    }
+
+    .left p {
+        font-size: 1.2em; /* Slightly reduce font size */
+    }
+}
+
+@media (max-width: 992px) {
+    .top {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .left, .mid, .right {
+        width: 100%; /* Full width for each section */
+        margin: 10px 0; /* Add margin between sections */
+    }
+
+    .left p {
+        font-size: 1em; /* Further reduce font size */
+    }
+
+    .mid input {
+        width: 95%; /* Slightly adjust input width */
+    }
+}
+
+@media (max-width: 768px) {
+    .mid input {
+        height: 2em; /* Adjust input height */
+        font-size: 0.9em; /* Reduce font size */
+    }
+
+    .right button {
+        height: 2em; /* Adjust button height */
+    }
+}
+
+@media (max-width: 576px) {
+    .top {
+        padding: 5px; /* Less padding on small screens */
+    }
+
+    .left p {
+        font-size: 0.8em; /* Smallest font size */
+    }
+
+    .mid input {
+        height: 30px; /* Further adjust input height */
+    }
+
+    .right button {
+        height: 30px; /* Adjust button height for small screens */
+    }
+}

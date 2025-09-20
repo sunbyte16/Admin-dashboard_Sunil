@@ -1,0 +1,204 @@
+/* Updated Table Styles */
+.table {
+    width: 100%;
+    border-collapse: separate; /* Allows spacing between rows */
+    border-spacing: 0 10px; /* Adds 10px gap between rows */
+}
+
+.table th,
+.table td {
+    background-color: #f1f1f1; /* Background color instead of border */
+    padding: 12px; /* Increased padding for better spacing */
+    text-align: center;
+    color: #5b5555;
+    font-weight: 500;
+}
+
+.table th {
+    background-color: #FFF8B7; /* Light yellow background for header */
+    cursor: pointer;
+    padding: 15px; /* Increased padding for a cleaner look */
+}
+
+.table tr {
+    border-radius: 8px; /* Rounded corners for rows */
+    overflow: hidden; /* Ensures the rounded corners are visible */
+}
+
+.table tr:hover {
+    background-color: #eaeaea; /* Slightly darker background on hover */
+}
+
+/* Button and Form Styling */
+.but {
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 25%;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+}
+
+.editHeader {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.editHeader button {
+    width: 44px;
+    height: 44px;
+    font-size: 44px;
+}
+
+.editHeader h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.editForm {
+    display: flex;
+    margin: auto;
+    width: 96%;
+    justify-content: space-evenly;
+}
+
+.editForm input {
+    width: 80%;
+    margin-right: 5%;
+}
+
+.editActions {
+    margin: auto;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.editActions button {
+    width: 120px;
+    background-color: #662671;
+    color: white;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    margin-left: -1%;
+}
+
+.formGroup input {
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .but {
+        width: 70%; /* Make button container wider */
+        margin-left: 15%; /* Centering adjustments */
+    }
+
+    .editHeader h2 {
+        font-size: 22px; /* Adjust header font size */
+    }
+
+    .editForm input {
+        width: 70%; /* Decrease width for input fields */
+    }
+
+    .editActions {
+        width: 60%; /* Adjust button actions width */
+    }
+}
+
+@media (max-width: 992px) {
+    .table th, 
+    .table td {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .but {
+        width: 80%; /* Adjust button container */
+        margin-left: 10%; /* Centering adjustments */
+    }
+
+    .editHeader h2 {
+        font-size: 20px; /* Further adjust header font size */
+    }
+
+    .editForm input {
+        width: 60%; /* Further decrease input width */
+    }
+
+    .formGroup {
+        width: 45%; /* Adjust form group width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .table th, 
+    .table td {
+        font-size: 12px; /* Smaller font size for readability */
+    }
+
+    .but {
+        flex-direction: column; /* Stack buttons vertically */
+        width: 100%; /* Full width */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .editHeader button {
+        width: 36px; /* Adjust button size */
+        height: 36px;
+        font-size: 36px; /* Adjust font size */
+    }
+
+    .editForm {
+        flex-direction: column; /* Stack form fields */
+        width: 100%; /* Full width */
+    }
+
+    .editForm input {
+        width: 90%; /* Decrease width */
+        margin-right: 0; /* Reset margin */
+        margin-bottom: 10px; /* Add space between inputs */
+    }
+
+    .editActions {
+        flex-direction: column; /* Stack action buttons */
+        width: 100%; /* Full width */
+        margin-top: 20px; /* Reduce top margin */
+    }
+
+    .editActions button {
+        width: 100%; /* Full width for buttons */
+        margin-bottom: 10px; /* Space between buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    .table th, 
+    .table td {
+        font-size: 10px; /* Further reduce font size */
+    }
+
+    .editHeader h2 {
+        font-size: 18px; /* Smaller header font */
+    }
+
+    .editHeader button {
+        width: 32px; /* Further adjust button size */
+        height: 32px;
+        font-size: 32px; /* Adjust font size */
+    }
+
+    .editActions button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
